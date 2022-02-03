@@ -2,26 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tangerine:wght@700&display=swap');
 
-@font-face {
-    font-family: 'Android';
-    src: url('/fontes/idroid.otf') format('opentype');
-    font-weight: normal;
-}
 
 /* Variáveis em CSS / Todas as variáveis em CSS começam com dois tracinhos -- como no exemplo abaixo*/
 :root {
     --cor0: #c5ebd6; 
-    --cor1: #83e1ad;
-    --cor2: #3ddc84;
-    --cor3: #2fa866;
-    --cor4: #1a5c37;
-    --cor5: #063d1e;
+    --cor1: #6B87EE;
+    --cor2: #6B2FEB;
+    --cor3: #EBDD0C;
+    --cor4: #1ea5d7;
+    --cor5: #05103a;
     --cor6: #ffffff;
     --cor7: #000000;
+    --cor8: #0635de;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', 'cursive';
-    --fonte-android: 'Android', 'cursive';
 }
 
 /* seletor com asterísco "configuração global" que seleciona todos os elementosdo HTML */
@@ -31,7 +26,7 @@
 }
 
 body {
-    background-color: var(--cor0);
+    background-color: var(--cor6);
     font-family: var(--fonte-padrao);
 }
 
@@ -40,7 +35,7 @@ a.externo::after {
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: linear-gradient(to top, var(--cor4), var(--cor7));
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
@@ -49,32 +44,31 @@ header {
 header > h1 {
     color: var(--cor6);
     font-family: var(--fonte-destaque);
-    font-size: 3em;
+    font-size: 4em;
     font-weight: normal;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267) /*sombra no texto - CURIOSIDADE DE TECNOLOGIA */
 }
 
 header > p {
     font-family: var(--fonte-padrao);
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: var(--cor6);
     max-width: 600px;
     padding-left: 10px;
     padding-right: 10px;
     margin: auto;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315) /*sombra no texto - Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um só lugar */
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.315) /*sombra no texto - Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um só lugar */
 }
 
 nav {
-    background-color: var(--cor5);
-    padding: 10px;
+    background-color: var(--cor4);
+    padding: 15px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.365);
 }
 
 nav > a {
-    color: var(--cor1);
+    color: var(--cor5);
     padding: 10px;
     border-radius: 8px;
     text-decoration: none; /* tirar o link sublinhado */
@@ -83,15 +77,15 @@ nav > a {
 }
 
 nav > a:hover {
-    background-color: var(--cor2);
-    color: var(--cor5);
+    background-color: var(--cor0);
+    color: var(--cor8);
 }
 
 main {
-
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
+    margin-top: 1px;
     margin-bottom: 30px;
     padding: 20px;
     background-color: var(--cor6);
@@ -103,17 +97,19 @@ main {
 
 main > article > h1 {
     color: var(--cor5);
-    font-family: var(--fonte-android);
+    font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 2.3em;
+    margin-top: 25px;
+    background-image: linear-gradient(to bottom, var(--cor0), transparent);
 }
 
 main > article > h2 {
-    font-family: var(--fonte-android);
-    color: var(--cor4);
-    font-size: 1.3em;
+    font-family: var(--fonte-destaque);
+    color: var(--cor5);
+    font-size: 1.7em;
     font-weight: normal;
-    background-image: linear-gradient(to right, var(--cor1), transparent);
+    background-image: linear-gradient(to bottom, var(--cor0), transparent);
     text-indent: 8px;
 }
 
@@ -126,21 +122,20 @@ main p {
 }
 
 main strong {
-    color: var(--cor4);
-    font-weight: bold;
+    color: var(--cor5);
+    font-weight: bolder;
 }
 
 main a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--cor5);
-    background-color: var(--cor0);
-    padding: 2px 6px;
+    color: var(--cor8);
+    padding: 2px 2px;
 }
 
 main a:hover {
     text-decoration: underline;
-    color: var(--cor4);
+    color: var(--cor5);
 }
 
 main img {
@@ -170,14 +165,14 @@ div.video > iframe {
 }
 
 aside {
-    background-color: var(--cor1);
+    background-color: var(--cor0);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.483);
 }
 
 aside > h3 {
-    background-color: var(--cor4);
+    background-color: var(--cor8);
     color: var(--cor6);
     padding: 10px;
     margin: -10px -10px 0px -10px;
@@ -207,5 +202,5 @@ footer > p > a {
 
 footer a:hover {
     text-decoration: underline;
-    color: var(--cor1);
+    color: var(--cor3);
 }
